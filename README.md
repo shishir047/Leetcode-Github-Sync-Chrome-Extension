@@ -1,7 +1,7 @@
 Steps: 
 1. Download the project.
 2. Install Node.js in system
-3. run "node init -y" in github-oauth-server folder
+3. run "nmp init -y" in github-oauth-server folder
 4. open cmd in github-oauth-server folder
 5. run node server.mjs
 
