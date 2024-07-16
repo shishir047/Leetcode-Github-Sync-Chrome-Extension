@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Sync Submissions</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      font-size: 10px;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+    }
+
+    #LEETCODE_SESSION {
+      height: 350px;
+      flex-grow: 1;
+    }
+
+    .spinner {
+      display: none;
+      margin: 0 auto;
+      border: 3px solid #f3f3f3;
+      border-top: 3px solid #1d5275;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div id="github-status"></div>
+    <a href="#" id="signout-link" style="display:none; margin-left: 10px;">Sign Out</a>
+  </div>
+
+  <br>
+
+  <div class="container">
+    <textarea id="LEETCODE_SESSION" placeholder="Cookie LEETCODE_SESSION"></textarea>
+  </div>
+
+  <br>
+
+  <button id="fetch-cookie-button">Fetch Leetcode Cookie</button>
+  <br><br>
+  <button id="sync-button">Sync Submissions</button>
+
+
+
+  <div id="spinner" class="spinner"></div>
+  <div id="sync-status" style="color: rgb(0, 187, 0); text-align: center;"></div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
